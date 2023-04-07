@@ -3,7 +3,7 @@
 import flatpickr from 'flatpickr';
 // Додатковий імпорт стилів
 import 'flatpickr/dist/flatpickr.min.css';
-import { Report } from 'notiflix';
+import { Notify } from 'notiflix';
 let timerId = null;
 const refs = {
   getElInputDate: document.getElementById('datetime-picker'),
@@ -26,7 +26,7 @@ const options = {
       refs.startBtn.removeAttribute('disabled');
     } else {
       refs.startBtn.disabled = true;
-      Report.info('Please choose a date in the future');
+      Notify.failure('Please choose a date in the future');
     }
   },
 };
