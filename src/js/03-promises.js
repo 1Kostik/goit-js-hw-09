@@ -30,7 +30,7 @@ function onFromSubmitCreatePromises(event) {
     createPromise(i, delay).then(onSuccess).catch(onError);
     delay += step;
   }
- dataParams = {};
+ form.reset();
 }
 
 function onSuccess({ position, delay }) {
